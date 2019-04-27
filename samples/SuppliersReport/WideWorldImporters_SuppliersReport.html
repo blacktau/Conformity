@@ -1,0 +1,112 @@
+﻿<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <style>
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .smallcaps {
+            font-variant: small-caps;
+        }
+
+        .maintable {
+            width: 95%;
+            margin-left: auto;
+            margin-right: auto;
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        .maintable td {
+            padding: 0 1rem;
+            border: 1px solid black;
+        }
+
+        .header {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: flex-start;
+            align-content: stretch;
+            align-items: flex-start;
+        }
+
+        .header-left {
+            flex: 2 1 auto;
+        }
+
+        .header-right {
+            flex: 1 1 auto;
+        }
+
+        .logo {
+            width: 5cm;
+            margin-top: 0.75cm;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <img class="logo" src="logo.png" />
+            </td>
+            <td>
+                <h2>World Wide Importers - Supplier Report for {{SupplierName}} [{{SupplierReference}}]</h2>
+            </td>
+        </tr>
+    </table>
+    <hr />
+    <table class="maintable">
+        <tr>
+            <td rowspan="3">
+                <p class="smallcaps">Postal Address:</p>
+                <p>
+                    {{PostalAddressLine1}}<br />
+                    {{PostalAddressLine2}}<br />
+                    {{PostalCode}}
+                </p>
+            </td>
+            <td>
+                <p class="smallcaps">Phone Number:</p>
+                <p>{{SupplierPhoneNumber}}</p>
+            </td>
+            <td>
+                <p class="smallcaps">Category:</p>
+                <p>{{SupplierCategory}}</p>
+            </td>
+        <tr>
+            <td colspan="2">
+                <p class="smallcaps">Website:</p>
+                <p><a href="{{SupplierWebsite}}">{{SupplierWebsite}}</a></p>
+            </td>
+        </tr>
+    </table>
+    <p>
+        The following products are Provided by the Above Supplier
+    </p>
+    <table>
+        <thead>
+            <tr>
+                <th>Stock Item ID</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+        {{#SupplierItems}}
+            <tr>
+                <td>
+                    {{StockItemId}}
+                </td>
+                <td>
+                    {{StockItemName}}
+                </td>
+            </tr>
+        {{/SupplierItems}}
+        </tbody>
+    </table>
+</body>
+</html>

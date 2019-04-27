@@ -1,0 +1,8 @@
+{
+  "profiles": {
+    "Conformity": {
+      "commandName": "Project",
+      "commandLineArgs": "--job-file D:\\Projects\\Conformity\\samples\\SuppliersReport\\WideWorldImporters_SuppliersReport.json  --output-folder D:\\Projects\\Conformity\\output\\ "
+    }
+  }
+}

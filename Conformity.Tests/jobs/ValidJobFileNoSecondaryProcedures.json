@@ -1,0 +1,6 @@
+{
+  "ConnectionString": "Server=localhost;Database=WideWorldImporters;User Id=sa;Password=P@55w0rd!",
+  "PrimaryProcedure": "pr_GetSuppliers",
+  "PrimaryKey": "SupplierId",
+  "TemplateFile": ".\\templates\\HealthCareDiagTemplate.html"
+}

@@ -1,0 +1,9 @@
+{
+  "ConnectionString": "Server=localhost;Database=WideWorldImporters;User Id=sa;Password=P@55w0rd!",
+  "PrimaryProcedure": "pr_GetSuppliers",
+  "PrimaryKey": "SupplierID",
+  "SecondaryProcedures": {
+    "SupplierItems": "pr_GetSupplierItems"
+  },
+  "TemplateFile": "WideWorldImporters_SuppliersReport.html"
+}
